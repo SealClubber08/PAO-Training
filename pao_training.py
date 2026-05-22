@@ -642,7 +642,7 @@ def print_scoreboard(stats):
     
     print("╚" + "═"*40 + "╝")
     print(f"{C_RESET}")
-    print(f"{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_ORANGE}return{C_BLACK}' for hub | '{C_MAGENTA}edit{C_BLACK}' to edit | '{C_CYAN}open{C_BLACK}' for folder.{C_RESET}")
+    print(f"{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_MAGENTA}edit{C_BLACK}' to edit | '{C_CYAN}open{C_BLACK}' for folder.{C_RESET}")
 
 def print_speed_recall_banner(stats):
     print(f"{C_BLUE}{C_BOLD}")
@@ -1161,7 +1161,7 @@ def play_training_mode(valid_pao_keys, persons, actions, objects, global_stats, 
         
         clear_screen()
         print_training_banner()
-        print(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_ORANGE}return{C_BLACK}' for hub | '{C_MAGENTA}back{C_BLACK}' for menu | '{C_CYAN}hint{C_BLACK}' for help.\n{C_RESET}")
+        print(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_MAGENTA}back{C_BLACK}' for menu | '{C_CYAN}hint{C_BLACK}' for help.\n{C_RESET}")
         print("-" * 40)
         print(f"Remaining: {len(pool)}/{total_in_pool}".center(40))
         print_huge_number(current_num)
@@ -1189,7 +1189,7 @@ def play_training_mode(valid_pao_keys, persons, actions, objects, global_stats, 
                 letter_mapping = verify_letter_mapping(valid_pao_keys, persons, global_stats, force_prompt=True)
                 clear_screen()
                 print_training_banner()
-                print(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_ORANGE}return{C_BLACK}' for hub | '{C_MAGENTA}back{C_BLACK}' for menu | '{C_CYAN}hint{C_BLACK}' for help.\n{C_RESET}")
+                print(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_MAGENTA}back{C_BLACK}' for menu | '{C_CYAN}hint{C_BLACK}' for help.\n{C_RESET}")
                 print("-" * 40)
                 print(f"Remaining: {len(pool)}/{total_in_pool}".center(40))
                 print_huge_number(current_num)
@@ -1478,7 +1478,7 @@ def play_game():
             while True:
                 clear_screen()
                 print_countdown_banner(global_stats, answer_mode)
-                print(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_ORANGE}return{C_BLACK}' for hub | '{C_MAGENTA}back{C_BLACK}' for menu{C_RESET}")
+                print(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_MAGENTA}back{C_BLACK}' for menu{C_RESET}")
                 
                 chunk_status = f"{C_GREEN}Enabled{C_RESET}" if is_chunked else f"{C_RED}Disabled{C_RESET}"
                 ans_status = f"{C_GREEN}#{C_RESET}" if answer_mode == 'digits' else f"{C_GREEN}PAO{C_RESET}"
@@ -1630,7 +1630,7 @@ def play_game():
                     if attempted > 0:
                         print(f"\n{C_GREEN}All {attempted} attempted chunks were flawless!{C_RESET}")
                 
-                post_action = input(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_ORANGE}return{C_BLACK}' for hub | '{C_MAGENTA}back{C_BLACK}' (or {C_LAVENDER}Enter{C_BLACK}) for menu\n>>> {C_RESET}").strip().lower()
+                post_action = input(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_MAGENTA}back{C_BLACK}' (or {C_LAVENDER}Enter{C_BLACK}) for menu\n>>> {C_RESET}").strip().lower()
                 if post_action in ['quit', 'exit', 'q']:
                     print_session_summary(session)
                     sys.exit(99)
@@ -1648,7 +1648,7 @@ def play_game():
             while True:
                 clear_screen()
                 print_speed_recall_banner(global_stats)
-                print(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_ORANGE}return{C_BLACK}' for hub | '{C_MAGENTA}back{C_BLACK}' for menu{C_RESET}")
+                print(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_MAGENTA}back{C_BLACK}' for menu{C_RESET}")
                 
                 print(f"\n {C_BLUE}Select Difficulty Mode:{C_RESET}")
                 print(f"   {C_YELLOW}[1]{C_RESET} Easy     (18 digits - spaced)")
@@ -1775,7 +1775,7 @@ def play_game():
                         print(f"  - {error}")
                     print(f"\nThe expected answer was:\n{primary_text}")
 
-                post_action = input(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_ORANGE}return{C_BLACK}' for hub | '{C_MAGENTA}back{C_BLACK}' (or {C_LAVENDER}Enter{C_BLACK}) for menu\n>>> {C_RESET}").strip().lower()
+                post_action = input(f"\n{C_BLACK}Type '{C_RED}quit{C_BLACK}' to exit | '{C_MAGENTA}back{C_BLACK}' (or {C_LAVENDER}Enter{C_BLACK}) for menu\n>>> {C_RESET}").strip().lower()
                 if post_action in ['quit', 'exit', 'q']:
                     print_session_summary(session)
                     sys.exit(99)
